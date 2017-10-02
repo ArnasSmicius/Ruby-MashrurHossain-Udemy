@@ -1,9 +1,5 @@
-puts "Hello enter in you first name:"
+def multiply(first_number, second_number)
+   first_number.to_f * second_number.to_f
+end
 
-first_name = gets.chomp
-
-puts "Please enter your last name:"
-
-last_name = gets.chomp
-
-puts "Welcome to the playground, #{first_name} #{last_name}"
+puts multiply(20, 3)
