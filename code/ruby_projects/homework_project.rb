@@ -12,13 +12,13 @@ dial_book = {
     }
 
 #Printing available city names
-def displayCityNames(dial_book)
+def display_city_names(dial_book)
     puts "Available options:"
     dial_book.each{|k, v| puts k}
 end
 
 #Printing area code if it is available
-def displayAreaCode(dial_book, userChoice)
+def display_area_code(dial_book, userChoice)
     if dial_book.include?(userChoice.downcase)
         puts "#{userChoice} area code is #{dial_book[userChoice.downcase]}"
     else
@@ -32,8 +32,8 @@ loop do
     if answer.upcase != "Y"
         break
     end
-    displayCityNames(dial_book)
+    display_city_names(dial_book)
     puts "Please enter city name:"
     cityChosen = gets.chomp
-    displayAreaCode(dial_book, cityChosen)
+    display_area_code(dial_book, cityChosen)
 end
